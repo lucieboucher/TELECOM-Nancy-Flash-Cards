@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" styleClass="fond">
+   <children>
+      <BorderPane layoutY="-1.0" prefHeight="650.0" prefWidth="1000.0">
+         <left>
+            <VBox prefHeight="400.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="160" prefWidth="350.0" style="-fx-border-style: dashed dashed none none;">
+                     <VBox fx:id="statsboxPaquet" prefHeight="120.0">
+                        <VBox.margin>
+                           <Insets left="10.0" />
+                        </VBox.margin>
+                     </VBox>
+                  </VBox>
+                  <VBox prefWidth="350" style="-fx-border-style: dashed dashed none none;">
+                     <VBox fx:id="statsboxCarte" prefHeight="120.0" prefWidth="250.0">
+                        <VBox.margin>
+                           <Insets left="10.0" />
+                        </VBox.margin>
+                     </VBox>
+
+                  <PieChart fx:id="graphCarte" prefHeight="191.0" prefWidth="121.0" />
+                  </VBox>
+                  <VBox prefWidth="350" style="-fx-border-style: dashed dashed none none;">
+                     <VBox fx:id="statsboxEntrainement" prefHeight="120.0" prefWidth="250.0">
+                        <VBox.margin>
+                           <Insets left="10.0" />
+                        </VBox.margin></VBox>
+                  <PieChart fx:id="graphPaquet" prefHeight="191.0" prefWidth="121.0" />
+                </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <top>
+            <ToolBar prefHeight="32.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <items>
+                  <Button mnemonicParsing="false" onAction="#allerAccueil" text="Accueil" styleClass="boutonTool"/>
+                  <Button mnemonicParsing="false" onAction="#voirPaquet" text="Voir le paquet" styleClass="boutonTool"/>
+                  <Button mnemonicParsing="false" onAction="#quitterAppli" text="Quitter" styleClass="boutonTool"/>
+                  <SplitMenuButton mnemonicParsing="false" text="Voir les statistiques" styleClass="split-menu-button">
+                     <items>
+                        <MenuItem fx:id="paquetVisibility" mnemonicParsing="false" onAction="#showPaquet" text="✔ Statistiques paquet" styleClass="split-menu-button-arrow"/>
+                        <MenuItem fx:id="carteVisibility" mnemonicParsing="false" onAction="#showcarte" text="✔ Statistiques carte" styleClass="split-menu-button-arrow" />
+                        <MenuItem fx:id="entrainementVisibility" mnemonicParsing="false" onAction="#showEntrainement" text="✔ Statistiques entrainement" styleClass="split-menu-button-arrow"/>
+                     </items>
+                  </SplitMenuButton>
+               </items>
+            </ToolBar>
+         </top>
+         <center>
+            <VBox BorderPane.alignment="CENTER">
+            <ToggleButton fx:id="toggleFlashCard" mnemonicParsing="false" onAction="#majFlashCard" prefHeight="420.0" prefWidth="610.0" text="ToggleButton" styleClass="toggle-button1">
+                <VBox.margin>
+                    <Insets left="20" top="20.0" />
+                </VBox.margin>
+            </ToggleButton>
+            <HBox alignment="CENTER" prefHeight="200.0" prefWidth="450.0">
+               <children>
+                  <Button fx:id="questionReussieBouton" mnemonicParsing="false" onAction="#reussite" prefHeight="70.0" prefWidth="110.0" styleClass="reussite" text="Réussi">
+                        <HBox.margin>
+                           <Insets right="70.0" top="50.0" />
+                        </HBox.margin>
+                        <font>
+                           <Font name="System Bold" size="16.0" />
+                        </font></Button>
+                  <VBox>
+                     <VBox.margin>
+                        <Insets left="120.0" right="120" />
+                     </VBox.margin>
+                     <Label fx:id="compteurLabel" prefHeight="16.0" styleClass="titre" text="Timer" />
+                        <TextField fx:id="taReponse" promptText="Ecris ta réponse" >
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" text="Valider" fx:id="valideReponse" onAction="#majFlashCard" styleClass="button2">
+                           <VBox.margin>
+                              <Insets left="50.0" top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                  </VBox>
+                  <Button fx:id="questionLoupeeBouton" mnemonicParsing="false" onAction="#echec" prefHeight="70.0" prefWidth="110.0" styleClass="echec" text="Échoué" wrapText="true">
+                        <HBox.margin>
+                           <Insets left="70.0" top="50.0" />
+                        </HBox.margin>
+                        <font>
+                           <Font name="System Bold" size="16.0" />
+                        </font></Button>
+               </children>
+            </HBox>
+            </VBox>
+         </center>
+      </BorderPane>
+      <Button fx:id="ecouterSonBouton" layoutX="376.0" layoutY="471.0" mnemonicParsing="false" onAction="#ecouterSon" prefHeight="24.0" prefWidth="118.0" text="Rejouer le son" AnchorPane.leftAnchor="376.0" AnchorPane.rightAnchor="506.0" AnchorPane.topAnchor="471.0" styleClass="button2" />
+   </children>
+</AnchorPane>

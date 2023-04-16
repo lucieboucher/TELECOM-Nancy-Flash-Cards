@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="Infinity" maxWidth="Infinity" minHeight="27" minWidth="200" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <GridPane maxHeight="Infinity" maxWidth="Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+
+   <children>
+       <VBox>
+      <ToolBar prefHeight="32.0" prefWidth="600.0">
+         <items>
+            <ToggleButton fx:id="toggleBouton" mnemonicParsing="false" onAction="#majToggle" text="Gestion" styleClass="toggle-button2" />
+             <SplitMenuButton fx:id="splitMenu" mnemonicParsing="false" text="Technique d'Apprentissage" styleClass="split-menu-button">
+                   <items>
+                      <MenuItem mnemonicParsing="false" text="Aléatoire" onAction="#random"  styleClass="split-menu-button-arrow"/>
+                      <MenuItem mnemonicParsing="false" text="Classique" onAction="#classique" styleClass="split-menu-button-arrow" />
+                       <MenuItem mnemonicParsing="false" text="Libre" onAction="#avancement" styleClass="split-menu-button-arrow"/>
+                       <MenuItem mnemonicParsing="false" onAction="#master" text="Master" styleClass="split-menu-button-arrow"/>
+                   </items>
+            </SplitMenuButton>
+             <Button mnemonicParsing="false" onAction="#importerPaquet" text="Importer" fx:id="importPaquet" styleClass="boutonTool" />
+             <Button  mnemonicParsing="false" onAction="#Partager" text="Partager" styleClass="boutonTool"/>
+             <SplitMenuButton fx:id="tagMenu" mnemonicParsing="false" text="Trier" >
+                 <items>
+                     <RadioMenuItem fx:id="avancee" mnemonicParsing="false" text="Par Avancée" onAction="#triercouleur"/>
+                     <RadioMenuItem fx:id="nb" mnemonicParsing="false" text="Par Nombre de Cartes" onAction="#triernb"/>
+
+                 </items>
+             </SplitMenuButton>
+             <Button mnemonicParsing="false" onAction="#quitterAppli" text="Quitter" styleClass="boutonTool"/>
+         </items>
+      </ToolBar>
+       <ScrollPane HBox.hgrow="SOMETIMES" maxWidth="1000">
+           <content>
+               <VBox prefWidth="980.0" prefHeight="700">
+                   <GridPane fx:id="table"  layoutY="100.0" style="-fx-background-radius: 5 5 5 5;"
+                             VBox.vgrow="ALWAYS">
+                       <VBox.margin>
+                           <Insets top="20"/>
+                       </VBox.margin>
+
+                       <columnConstraints>
+                           <ColumnConstraints  percentWidth="32"/>
+                           <ColumnConstraints  percentWidth="32"/>
+                           <ColumnConstraints  percentWidth="32"/>
+                       </columnConstraints>
+                       <rowConstraints>
+
+                       </rowConstraints>
+                       <children>
+
+                       </children>
+                   </GridPane>
+               </VBox>
+           </content>
+       </ScrollPane>
+       </VBox>
+   </children>
+    </GridPane>
+</AnchorPane>

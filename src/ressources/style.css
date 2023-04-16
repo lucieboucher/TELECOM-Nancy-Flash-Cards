@@ -1,0 +1,129 @@
+
+.reussite{
+    -fx-background-color: #006400;
+    -fx-padding: 10px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 0, 0);
+
+}
+
+.echec{
+    -fx-background-color: #FF0000;
+    -fx-padding: 10px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 0, 0);
+
+}
+
+.titre{
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e468c;
+}
+
+.texte {
+    -fx-text-fill: #1e468c;
+
+}
+.button1 {
+    -fx-background-color: #a4c0ce;
+    -fx-padding: 10px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 0, 0);
+}
+
+.button2 {
+    -fx-background-color: #1e468c;
+    -fx-padding: 10px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 0, 0);
+}
+
+.boutonTool{
+    -fx-background-color: #e8cda0;
+    -fx-padding: 10px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #966550;
+    -fx-border-color: transparent;
+    -fx-background-radius: 10px;
+}
+
+.toggle-button1 {
+    -fx-background-color: #a4c0ce;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #1e468c;
+    -fx-font-weight: bold;
+}
+
+.toggle-button1:selected {
+    -fx-background-color: #1e468c;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #a4c0ce;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-font-weight: bold;
+}
+
+.toggle-button2 {
+    -fx-padding: 10px;
+    -fx-background-color: #e8cda0;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #966550;
+    -fx-font-weight: bold;
+}
+
+.toggle-button2:selected {
+    -fx-padding: 10px;
+    -fx-background-color: #966550;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #e8cda0;
+    -fx-font-weight: bold;
+
+}
+
+.split-menu-button {
+    -fx-font-size: 12px;
+    -fx-text-fill: #966550;
+    -fx-base: #e8cda0;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+}
+
+
+
+.split-menu-button-arrow {
+    -fx-background-color: #e8cda0;
+    -fx-text-fill: #966550;
+}
+
+
+.split-menu-button .label {
+    -fx-background-color: #e8cda0;
+    -fx-text-fill: #966550;
+}
+
+
+
+
+.tagmenu {
+    -fx-background-color: #e8cda0;
+    -fx-text-fill: #966550;
+    -fx-font-weight: bold;
+}
+
